@@ -306,7 +306,7 @@
     .ticker { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px 26px; font: 500 .77rem var(--mono); letter-spacing: .06em; text-transform: uppercase; }
     .ticker span:nth-child(even) { color: var(--maroon); }
 
-    .about-section { padding: clamp(76px, 10vw, 126px) 0; }
+    .about-section { padding: clamp(76px, 10vw, 126px) 0 clamp(64px, 7vw, 92px); }
     .about-panel {
       position: relative;
       overflow: hidden;
@@ -329,7 +329,7 @@
     }
     .about-copy, .about-side { position: relative; z-index: 1; }
     .about-section .section-kicker { color: var(--yellow); }
-    .about-section .section-title { max-width: 650px; color: var(--white); }
+    .about-section .section-title { max-width: 650px; color: var(--white); font-size: clamp(2.5rem, 4.3vw, 3.8rem); }
     .about-section .section-intro { max-width: 660px; margin-top: 24px; color: rgba(255, 253, 248, .78); }
     .about-side { align-self: center; }
     .focus-card {
@@ -732,7 +732,7 @@
     <section class="contact-section wrap" id="contact" aria-labelledby="contact-title">
       <div class="contact-panel">
         <div class="contact-content">
-          <p class="eyebrow">Have a good one in mind?</p>
+          <p class="eyebrow">Got an idea brewing?</p>
           <h2 id="contact-title">Let’s make<br>it happen.</h2>
           <p>Open to collaboration, freelance projects, and new opportunities. Tell me what you’re working on and let’s see where it goes.</p>
           <div class="contact-actions">
