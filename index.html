@@ -421,66 +421,9 @@
     .receipt-total { display: flex; align-items: center; justify-content: space-between; margin-top: 12px; padding: 10px; color: var(--green-deep); background: var(--yellow); border-radius: 8px; font: 500 .72rem var(--mono); }
 
     .gallery-section { padding: 0 0 clamp(80px, 10vw, 130px); }
-    .gallery-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-top: 30px; }
+    .gallery-grid { display: grid; grid-template-columns: minmax(0, 820px); justify-content: center; gap: 14px; margin-top: 30px; }
     .gallery-card { min-width: 0; margin: 0; padding: 10px; background: var(--white); border: 1px solid var(--line); border-radius: 21px; }
-    .gallery-photo-slot {
-      --slot-accent: var(--maroon-bright);
-      position: relative;
-      overflow: hidden;
-      display: grid;
-      place-content: center;
-      justify-items: center;
-      gap: 12px;
-      min-height: 240px;
-      aspect-ratio: .82;
-      padding: 18px;
-      color: var(--green-deep);
-      background: linear-gradient(145deg, #eee6d7 5%, #e1d4bf 100%);
-      border-radius: 13px;
-      text-align: center;
-    }
-    .gallery-photo-slot::before {
-      content: "";
-      position: absolute;
-      z-index: 0;
-      inset: 12px;
-      border: 1px dashed currentColor;
-      border-radius: 9px;
-      opacity: .32;
-      pointer-events: none;
-    }
-    .gallery-photo-slot::after {
-      content: "";
-      position: absolute;
-      z-index: 0;
-      top: -53px;
-      right: -45px;
-      width: 140px;
-      aspect-ratio: 1;
-      background: var(--yellow);
-      border-radius: 50%;
-      opacity: .22;
-      pointer-events: none;
-    }
-    .gallery-card:nth-child(2) .gallery-photo-slot { --slot-accent: var(--yellow); color: var(--white); background: var(--green); }
-    .gallery-card:nth-child(3) .gallery-photo-slot { --slot-accent: var(--maroon); color: var(--green-deep); background: #dce7dc; }
-    .gallery-card:nth-child(4) .gallery-photo-slot { --slot-accent: var(--yellow); color: var(--white); background: var(--maroon); }
-    .gallery-photo-symbol {
-      position: relative;
-      z-index: 1;
-      display: grid;
-      width: 52px;
-      aspect-ratio: 1;
-      place-items: center;
-      color: var(--maroon);
-      background: var(--yellow);
-      border-radius: 16px 16px 16px 4px;
-      font: 700 1.2rem var(--display);
-      transform: rotate(-5deg);
-    }
-    .gallery-photo-label { position: relative; z-index: 1; display: grid; gap: 5px; }
-    .gallery-photo-label span { color: var(--slot-accent); font: .65rem var(--mono); letter-spacing: .07em; text-transform: uppercase; }
-    .gallery-photo-label strong { font: 600 1.1rem/1.15 var(--display); letter-spacing: -.035em; }
+    .gallery-photo { display: block; width: 100%; aspect-ratio: 1.5 / 1; object-fit: cover; object-position: center 52%; border-radius: 13px; }
     .gallery-card figcaption { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 12px 4px 3px; }
     .gallery-card figcaption strong { font: 700 .95rem var(--display); }
     .gallery-card figcaption span { color: var(--muted); font: .62rem var(--mono); letter-spacing: .04em; text-transform: uppercase; }
@@ -555,7 +498,6 @@
       .project-grid { grid-template-columns: 1fr 1fr; }
       .project-card:last-child { grid-column: 1 / -1; }
       .project-card:last-child .project-visual { min-height: 200px; }
-      .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .path-grid { grid-template-columns: 1fr .8fr; gap: 30px; }
     }
     @media (max-width: 680px) {
@@ -597,10 +539,6 @@
       .contact-panel::after { top: auto; right: -65px; bottom: -95px; font-size: 15rem; }
       .contact-panel h2 { font-size: clamp(3.4rem, 15vw, 5.1rem); }
       .footer-inner { align-items: flex-start; flex-direction: column; gap: 6px; }
-    }
-    @media (max-width: 400px) {
-      .gallery-grid { grid-template-columns: 1fr; }
-      .gallery-photo-slot { aspect-ratio: 1.25; min-height: 220px; }
     }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
@@ -763,38 +701,14 @@
       <div class="section-heading-row">
         <div>
           <p class="eyebrow section-kicker">People &amp; work</p>
-          <h2 class="section-title" id="gallery-title">Learning, training &amp; operations<span aria-hidden="true">✳</span></h2>
+          <h2 class="section-title" id="gallery-title">Learning &amp; training in action<span aria-hidden="true">✳</span></h2>
         </div>
-        <p class="section-intro">Selected moments from training, outlet visits, and operational work. Add only photos that you are comfortable sharing publicly and that do not expose confidential company or employee information.</p>
+        <p class="section-intro">One of my favorite moments: hosting a cross-company training session for more than 200 attendees.</p>
       </div>
       <div class="gallery-grid" aria-label="Job photo gallery">
         <figure class="gallery-card">
-          <div class="gallery-photo-slot" role="img" aria-label="Photo placeholder for work and team activities">
-            <span class="gallery-photo-symbol" aria-hidden="true">✳</span>
-            <span class="gallery-photo-label"><span>Photo 01</span><strong>Photo coming soon</strong></span>
-          </div>
-          <figcaption><strong>Team &amp; field work</strong><span>On the ground</span></figcaption>
-        </figure>
-        <figure class="gallery-card">
-          <div class="gallery-photo-slot" role="img" aria-label="Photo placeholder for training and facilitation">
-            <span class="gallery-photo-symbol" aria-hidden="true">✳</span>
-            <span class="gallery-photo-label"><span>Photo 02</span><strong>Photo coming soon</strong></span>
-          </div>
-          <figcaption><strong>Training &amp; facilitation</strong><span>People first</span></figcaption>
-        </figure>
-        <figure class="gallery-card">
-          <div class="gallery-photo-slot" role="img" aria-label="Photo placeholder for people and process work">
-            <span class="gallery-photo-symbol" aria-hidden="true">✳</span>
-            <span class="gallery-photo-label"><span>Photo 03</span><strong>Photo coming soon</strong></span>
-          </div>
-          <figcaption><strong>People &amp; process</strong><span>Behind the scenes</span></figcaption>
-        </figure>
-        <figure class="gallery-card">
-          <div class="gallery-photo-slot" role="img" aria-label="Photo placeholder for professional learning">
-            <span class="gallery-photo-symbol" aria-hidden="true">✳</span>
-            <span class="gallery-photo-label"><span>Photo 04</span><strong>Photo coming soon</strong></span>
-          </div>
-          <figcaption><strong>Professional growth</strong><span>Always learning</span></figcaption>
+          <img class="gallery-photo" src="images/cross-company-training.png" alt="Revaldi hosting a cross-company training session in front of an audience." loading="lazy">
+          <figcaption><strong>Cross-company training</strong><span>Host · 200+ attendees</span></figcaption>
         </figure>
       </div>
     </section>
