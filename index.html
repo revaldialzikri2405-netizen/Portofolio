@@ -395,6 +395,7 @@
     .mock-dots i:nth-child(2) { background: var(--yellow); }
     .mock-dots i:nth-child(3) { background: #9ab8a2; }
     .mock-title { width: 42%; height: 7px; border-radius: 999px; background: var(--green); opacity: .85; }
+    .mock-label { color: var(--green); font: .55rem var(--mono); letter-spacing: .04em; text-transform: uppercase; }
     .metric-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-bottom: 10px; }
     .metric { height: 31px; padding: 5px; background: #f0ece4; border-radius: 5px; }
     .metric::before, .metric::after { content: ""; display: block; height: 4px; width: 55%; background: #9d8990; border-radius: 8px; }
@@ -410,6 +411,8 @@
     .monitor-bars { display: grid; gap: 7px; }
     .monitor-bar { height: 8px; overflow: hidden; background: rgba(255,255,255,.14); border-radius: 999px; }
     .monitor-bar span { display: block; height: 100%; background: var(--yellow); border-radius: inherit; }
+    .training-modes { display: flex; gap: 6px; margin-top: 12px; }
+    .training-modes span { flex: 1; padding: 6px 4px; color: var(--white); background: rgba(255,255,255,.1); border-radius: 6px; font: .54rem var(--mono); text-align: center; text-transform: uppercase; }
     .receipt { width: 76%; padding: 18px 17px; color: var(--ink); background: #fffaf0; border: 1px solid rgba(75,29,43,.13); box-shadow: 0 14px 28px rgba(75,29,43,.12); transform: rotate(-2deg); }
     .receipt-heading { display: flex; align-items: center; justify-content: space-between; padding-bottom: 12px; border-bottom: 1px dashed #b9aaa2; font: .7rem var(--mono); }
     .receipt-heading strong { color: var(--maroon); }
@@ -702,14 +705,28 @@
           <p class="eyebrow section-kicker">Selected work</p>
           <h2 class="section-title" id="projects-title">Selected work<span aria-hidden="true">✳</span></h2>
         </div>
-        <p class="section-intro">Practical work that demonstrates reporting, process monitoring, accuracy, and people-related operational skills.</p>
+        <p class="section-intro">Selected work that reflects my experience in training, people-related reporting, and day-to-day operations.</p>
       </div>
 
       <div class="project-grid">
         <article class="project-card">
           <div class="project-visual" aria-hidden="true">
+            <div class="monitor-board">
+              <div class="monitor-head"><span>SOP REFRESHERS</span><span>WEEKLY</span></div>
+              <div class="monitor-stats"><div class="monitor-stat"><strong>55</strong><small>OUTLETS</small></div><div class="monitor-stat"><strong>55</strong><small>ADMINS</small></div></div>
+              <div class="training-modes"><span>Online · weekly</span><span>In person · Padang</span></div>
+            </div>
+          </div>
+          <div class="project-meta"><span class="project-index">01 / Training</span><span>Learning &amp; development</span></div>
+          <h3>SOP Training for 55 Outlets</h3>
+          <p>I handled SOP reports for 55 outlets and led weekly online refresher sessions for 55 outlet admins. I also helped organize in-person training in Padang and hosted a company event for more than 200 people from different organizations. Together, these experiences gave me practice explaining information clearly and bringing different groups together.</p>
+          <ul class="tech-list" aria-label="Focus areas"><li>SOP reporting</li><li>Training facilitation</li><li>55 outlet admins</li></ul>
+        </article>
+
+        <article class="project-card">
+          <div class="project-visual" aria-hidden="true">
             <div class="mock-window">
-              <div class="mock-top"><span class="mock-dots"><i></i><i></i><i></i></span><span class="mock-title"></span></div>
+              <div class="mock-top"><span class="mock-dots"><i></i><i></i><i></i></span><span class="mock-label">Sample report view</span></div>
               <div class="metric-row"><span class="metric"></span><span class="metric"></span><span class="metric"></span></div>
               <svg class="chart-svg" viewBox="0 0 320 100" role="presentation">
                 <path d="M8 82 C42 75 44 57 78 64 S118 74 148 45 S193 57 221 32 S268 43 312 10" fill="none" stroke="#782d43" stroke-width="4" stroke-linecap="round"/>
@@ -718,40 +735,26 @@
               </svg>
             </div>
           </div>
-          <div class="project-meta"><span class="project-index">01 / Data viz</span><span>Dashboard</span></div>
-          <h3>KPI & Performance Reporting</h3>
-          <p>A performance reporting dashboard designed to bring manager, network PIC, and sales performance information into one view, supporting clearer monitoring and review. This is an operations reporting project with skills transferable to HR reporting.</p>
-          <ul class="tech-list" aria-label="Tools and focus"><li>HTML</li><li>Chart.js</li><li>Data viz</li></ul>
-        </article>
-
-        <article class="project-card">
-          <div class="project-visual" aria-hidden="true">
-            <div class="monitor-board">
-              <div class="monitor-head"><span>OUTLET CHECK-IN</span><span>UI CONCEPT</span></div>
-              <div class="monitor-stats"><div class="monitor-stat"><strong>27</strong><small>OUTLETS</small></div><div class="monitor-stat"><strong>55</strong><small>ADMINS</small></div></div>
-              <div class="monitor-bars"><div class="monitor-bar"><span style="width:88%"></span></div><div class="monitor-bar"><span style="width:66%"></span></div><div class="monitor-bar"><span style="width:78%"></span></div></div>
-            </div>
-          </div>
-          <div class="project-meta"><span class="project-index">02 / Monitoring</span><span>Operations</span></div>
-          <h3>Attendance & Admin Monitoring</h3>
-          <p>A monitoring concept covering check-in compliance, task tracking, rankings, and spreadsheet reporting across 27 outlets and 55 admins. The experience is relevant to attendance tracking and operational coordination; it is not presented as an employee HRIS.</p>
-          <ul class="tech-list" aria-label="Tools and focus"><li>Excel</li><li>Python</li><li>Monitoring</li></ul>
+          <div class="project-meta"><span class="project-index">02 / People data</span><span>Performance reporting</span></div>
+          <h3>People &amp; Performance Reporting</h3>
+          <p>I calculated KPI results for Regional Managers and area PICs, and prepared attendance and salary reports for DSO employees and daily workers at the Padang gateway. The work called for careful handling of people-related data and dependable reporting.</p>
+          <ul class="tech-list" aria-label="Focus areas"><li>KPI reporting</li><li>Attendance &amp; salary</li><li>Manpower data</li></ul>
         </article>
 
         <article class="project-card">
           <div class="project-visual" aria-hidden="true">
             <div class="receipt">
-              <div class="receipt-heading"><strong>RECONCILIATION</strong><span>WORKFLOW</span></div>
-              <div class="receipt-row"><span>Overload records</span><span>REVIEW</span></div>
-              <div class="receipt-row"><span>Official report</span><span>COMPARE</span></div>
-              <div class="receipt-row"><span>Courier payments</span><span>CHECK</span></div>
-              <div class="receipt-total"><span>FLAG DISCREPANCIES</span><strong>↗</strong></div>
+              <div class="receipt-heading"><strong>PARTNER FILES</strong><span>AREA OPS</span></div>
+              <div class="receipt-row"><span>New &amp; renewed contracts</span><span>50+</span></div>
+              <div class="receipt-row"><span>Outlet opening requests</span><span>20+</span></div>
+              <div class="receipt-row"><span>Blind Van records</span><span>53</span></div>
+              <div class="receipt-total"><span>AREA REPORTING</span><strong>↗</strong></div>
             </div>
           </div>
-          <div class="project-meta"><span class="project-index">03 / Finance</span><span>Reconciliation</span></div>
-          <h3>Operational Records Reconciliation</h3>
-          <p>A reconciliation workflow comparing operational records with official reports to help identify discrepancies. It reflects attention to detail, record checking, and process discipline.</p>
-          <ul class="tech-list" aria-label="Tools and focus"><li>Python</li><li>Pandas</li><li>Finance</li></ul>
+          <div class="project-meta"><span class="project-index">03 / Coordination</span><span>Operations</span></div>
+          <h3>Partner &amp; Area Operations</h3>
+          <p>I’ve handled more than 50 partner contracts, including new agreements and renewals, submitted over 20 requests for new outlet openings, and maintained records for 53 Blind Van vehicles across West Sumatra. I also compiled data on area programs and reported it to HQ. Much of the work depended on accurate records and steady follow-up across partners, vendors, and area teams.</p>
+          <ul class="tech-list" aria-label="Focus areas"><li>Contract administration</li><li>Vendor coordination</li><li>Area reporting</li></ul>
         </article>
       </div>
     </section>
