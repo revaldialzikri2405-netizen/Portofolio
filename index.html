@@ -421,9 +421,9 @@
     .receipt-total { display: flex; align-items: center; justify-content: space-between; margin-top: 12px; padding: 10px; color: var(--green-deep); background: var(--yellow); border-radius: 8px; font: 500 .72rem var(--mono); }
 
     .gallery-section { padding: 0 0 clamp(80px, 10vw, 130px); }
-    .gallery-grid { display: grid; grid-template-columns: minmax(0, 820px); justify-content: center; gap: 14px; margin-top: 30px; }
+    .gallery-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 1040px; justify-content: center; gap: 14px; margin: 30px auto 0; }
     .gallery-card { min-width: 0; margin: 0; padding: 10px; background: var(--white); border: 1px solid var(--line); border-radius: 21px; }
-    .gallery-photo { display: block; width: 100%; aspect-ratio: 1.5 / 1; object-fit: cover; object-position: center 52%; border-radius: 13px; }
+    .gallery-photo { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: center; border-radius: 13px; }
     .gallery-card figcaption { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 12px 4px 3px; }
     .gallery-card figcaption strong { font: 700 .95rem var(--display); }
     .gallery-card figcaption span { color: var(--muted); font: .62rem var(--mono); letter-spacing: .04em; text-transform: uppercase; }
@@ -529,6 +529,7 @@
       .project-card:last-child { grid-column: auto; }
       .project-visual, .project-card:last-child .project-visual { min-height: 210px; }
       .gallery-section { padding-bottom: 76px; }
+      .gallery-grid { grid-template-columns: 1fr; }
       .path-section { padding-bottom: 76px; }
       .path-grid { grid-template-columns: 1fr; gap: 32px; }
       .education-card { max-width: 460px; }
@@ -701,14 +702,18 @@
       <div class="section-heading-row">
         <div>
           <p class="eyebrow section-kicker">People &amp; work</p>
-          <h2 class="section-title" id="gallery-title">Learning &amp; training in action<span aria-hidden="true">✳</span></h2>
+          <h2 class="section-title" id="gallery-title">Facilitation in action<span aria-hidden="true">✳</span></h2>
         </div>
-        <p class="section-intro">One of my favorite moments: hosting a cross-company training session for more than 200 attendees.</p>
+        <p class="section-intro">From hosting cross-company training to preparing and moderating a meeting with Padang area owners, I’ve learned to bring people together, guide discussions, and capture key points for follow-up.</p>
       </div>
       <div class="gallery-grid" aria-label="Job photo gallery">
         <figure class="gallery-card">
           <img class="gallery-photo" src="images/cross-company-training.png" alt="Revaldi hosting a cross-company training session in front of an audience." loading="lazy">
           <figcaption><strong>Cross-company training</strong><span>Host · 200+ attendees</span></figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <img class="gallery-photo" src="images/padang-area-owners-meeting.png" alt="Revaldi standing with Padang area owners after a meeting." loading="lazy">
+          <figcaption><strong>Padang area owners meeting</strong><span>Moderator · event prep &amp; minutes</span></figcaption>
         </figure>
       </div>
     </section>
