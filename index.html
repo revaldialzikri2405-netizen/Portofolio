@@ -421,7 +421,7 @@
     .receipt-total { display: flex; align-items: center; justify-content: space-between; margin-top: 12px; padding: 10px; color: var(--green-deep); background: var(--yellow); border-radius: 8px; font: 500 .72rem var(--mono); }
 
     .gallery-section { padding: 0 0 clamp(80px, 10vw, 130px); }
-    .gallery-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 1040px; justify-content: center; gap: 14px; margin: 30px auto 0; }
+    .gallery-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); max-width: 1180px; justify-content: center; gap: 14px; margin: 30px auto 0; }
     .gallery-card { min-width: 0; margin: 0; padding: 10px; background: var(--white); border: 1px solid var(--line); border-radius: 21px; }
     .gallery-photo { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: center; border-radius: 13px; }
     .gallery-card figcaption { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 12px 4px 3px; }
@@ -498,6 +498,7 @@
       .project-grid { grid-template-columns: 1fr 1fr; }
       .project-card:last-child { grid-column: 1 / -1; }
       .project-card:last-child .project-visual { min-height: 200px; }
+      .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .path-grid { grid-template-columns: 1fr .8fr; gap: 30px; }
     }
     @media (max-width: 680px) {
@@ -702,9 +703,9 @@
       <div class="section-heading-row">
         <div>
           <p class="eyebrow section-kicker">People &amp; work</p>
-          <h2 class="section-title" id="gallery-title">Facilitation in action<span aria-hidden="true">✳</span></h2>
+          <h2 class="section-title" id="gallery-title">Learning, facilitation &amp; performance<span aria-hidden="true">✳</span></h2>
         </div>
-        <p class="section-intro">From hosting cross-company training to preparing and moderating a meeting with Padang area owners, I’ve learned to bring people together, guide discussions, and capture key points for follow-up.</p>
+        <p class="section-intro">From hosting training and moderating area meetings to sharing Network results and improvement insights with Regional Managers and area PICs, my work has often centered on helping teams learn, reflect, and improve together.</p>
       </div>
       <div class="gallery-grid" aria-label="Job photo gallery">
         <figure class="gallery-card">
@@ -714,6 +715,10 @@
         <figure class="gallery-card">
           <img class="gallery-photo" src="images/padang-area-owners-meeting.png" alt="Revaldi standing with Padang area owners after a meeting." loading="lazy">
           <figcaption><strong>Padang area owners meeting</strong><span>Moderator · event prep &amp; minutes</span></figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <img class="gallery-photo" src="images/network-monthly-meeting.png" alt="Revaldi standing with the Network team at a monthly meeting." loading="lazy">
+          <figcaption><strong>Network monthly meeting</strong><span>Performance insights</span></figcaption>
         </figure>
       </div>
     </section>
