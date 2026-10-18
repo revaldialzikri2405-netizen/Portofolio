@@ -304,30 +304,20 @@
 
     .ticker-wrap { padding: 18px 0; overflow: hidden; color: var(--green-deep); background: var(--yellow); border-block: 1px solid rgba(33, 28, 29, .1); }
     .ticker { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px 26px; font: 500 .77rem var(--mono); letter-spacing: .06em; text-transform: uppercase; }
-    .ticker span:nth-child(even) { color: var(--maroon); }
 
     .about-section { padding: clamp(76px, 10vw, 126px) 0 clamp(64px, 7vw, 92px); }
     .about-panel {
       position: relative;
       overflow: hidden;
       display: grid;
-      grid-template-columns: 1.1fr .9fr;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr);
       gap: clamp(36px, 7vw, 90px);
       padding: clamp(30px, 6vw, 72px);
       color: var(--white);
       background: var(--green);
       border-radius: 34px;
     }
-    .about-panel::after {
-      content: "✳";
-      position: absolute;
-      right: -17px;
-      top: -60px;
-      color: rgba(244, 214, 94, .1);
-      font: 300 18rem/1 var(--display);
-      pointer-events: none;
-    }
-    .about-copy, .about-side { position: relative; z-index: 1; }
+    .about-copy, .about-side { position: relative; z-index: 1; min-width: 0; }
     .about-section .section-kicker { color: var(--yellow); }
     .about-section .section-title { max-width: 650px; color: var(--white); font-size: clamp(2.5rem, 4.3vw, 3.8rem); }
     .about-section .section-intro { max-width: 660px; margin-top: 24px; color: rgba(255, 253, 248, .78); }
@@ -337,7 +327,7 @@
       color: var(--ink);
       background: var(--yellow);
       border-radius: 22px 22px 22px 5px;
-      transform: rotate(1.3deg);
+      max-width: 100%;
     }
     .focus-card .eyebrow { color: var(--maroon); }
     .focus-card h3 { margin: 10px 0 12px; font: 700 1.5rem/1.1 var(--display); letter-spacing: -.05em; }
@@ -462,15 +452,6 @@
       background: var(--maroon);
       border-radius: 34px;
     }
-    .contact-panel::after {
-      content: "✳";
-      position: absolute;
-      right: 2%;
-      top: -85px;
-      color: rgba(244, 214, 94, .12);
-      font: 300 22rem/1 var(--display);
-      pointer-events: none;
-    }
     .contact-content { position: relative; z-index: 1; max-width: 760px; }
     .contact-panel .eyebrow { color: var(--yellow); }
     .contact-panel h2 { margin: 10px 0 18px; font: 700 clamp(3rem, 7vw, 6.2rem)/.9 var(--display); letter-spacing: -.09em; }
@@ -514,10 +495,8 @@
       .hero-caption { right: 18px; bottom: 0; }
       .ticker { gap: 9px 15px; font-size: .66rem; }
       .about-section { padding: 66px 0; }
-      .about-panel { grid-template-columns: 1fr; gap: 28px; padding: 28px 22px; border-radius: 26px; }
+      .about-panel { grid-template-columns: minmax(0, 1fr); gap: 28px; padding: 28px 22px; border-radius: 26px; }
       .about-section .section-title { font-size: clamp(2.75rem, 12vw, 4rem); }
-      .about-panel::after { right: -40px; top: 160px; font-size: 12rem; }
-      .focus-card { max-width: 430px; transform: rotate(.6deg); }
       .projects-section { padding-bottom: 76px; }
       .section-heading-row { display: block; margin-bottom: 24px; }
       .section-heading-row .section-intro { margin-top: 14px; }
@@ -533,7 +512,6 @@
       .skills-panel { grid-template-columns: 1fr; gap: 28px; padding: 27px 22px; }
       .contact-section { padding-bottom: 24px; }
       .contact-panel { padding: 34px 24px; border-radius: 27px; }
-      .contact-panel::after { top: auto; right: -65px; bottom: -95px; font-size: 15rem; }
       .contact-panel h2 { font-size: clamp(3.4rem, 15vw, 5.1rem); }
       .footer-inner { align-items: flex-start; flex-direction: column; gap: 6px; }
     }
@@ -602,9 +580,9 @@
 
     <div class="ticker-wrap" aria-label="Portfolio themes">
       <div class="wrap ticker">
-        <span>Curiosity first</span><span aria-hidden="true">✳</span>
-        <span>Make it clear</span><span aria-hidden="true">✳</span>
-        <span>Build with people</span><span aria-hidden="true">✳</span>
+        <span>Curiosity first</span>
+        <span>Make it clear</span>
+        <span>Build with people</span>
         <span>Keep getting better</span>
       </div>
     </div>
@@ -637,7 +615,7 @@
       <div class="section-heading-row">
         <div>
           <p class="eyebrow section-kicker">Selected work</p>
-          <h2 class="section-title" id="projects-title">Selected work<span aria-hidden="true">✳</span></h2>
+          <h2 class="section-title" id="projects-title">Selected work</h2>
         </div>
         <p class="section-intro">Selected work that reflects my experience in training, people-related reporting, and day-to-day operations.</p>
       </div>
@@ -695,7 +673,7 @@
       <div class="section-heading-row">
         <div>
           <p class="eyebrow section-kicker">People &amp; work</p>
-          <h2 class="section-title" id="gallery-title">Learning, facilitation &amp; performance<span aria-hidden="true">✳</span></h2>
+          <h2 class="section-title" id="gallery-title">Learning, facilitation &amp; performance</h2>
         </div>
         <p class="section-intro">From training sessions and team reviews to a talk show with J&amp;T Cargo West Sumatra’s top management, these moments reflect how I bring people together, guide conversations, and share performance insights to help teams improve.</p>
       </div>
