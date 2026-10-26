@@ -45,7 +45,7 @@
     }
     img { display: block; max-width: 100%; }
     a { color: inherit; }
-    a:focus-visible, summary:focus-visible {
+    a:focus-visible, summary:focus-visible, button:focus-visible {
       outline: 3px solid var(--maroon-bright);
       outline-offset: 4px;
       border-radius: 4px;
@@ -142,6 +142,22 @@
       transition: transform .2s ease, background .2s ease;
     }
     .header-cta:hover { background: var(--green-deep); transform: translateY(-2px); }
+    .language-toggle {
+      width: 42px;
+      height: 42px;
+      flex: 0 0 42px;
+      display: inline-grid;
+      place-items: center;
+      padding: 0;
+      color: var(--green);
+      background: transparent;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      cursor: pointer;
+      font: 500 .72rem var(--mono);
+      transition: background .2s ease, transform .2s ease;
+    }
+    .language-toggle:hover { background: rgba(23, 63, 53, .07); transform: translateY(-2px); }
     .mobile-menu { display: none; position: relative; }
     .mobile-menu summary {
       list-style: none;
@@ -167,6 +183,11 @@
       box-shadow: 0 16px 40px rgba(33, 28, 29, .14);
     }
     .mobile-links a { padding: 9px 10px; border-radius: 10px; }
+
+    @media (max-width: 760px) {
+      .desktop-nav, .header-cta { display: none; }
+      .mobile-menu { display: block; }
+    }
 
     .hero { padding: clamp(48px, 8vw, 96px) 0 34px; }
     .hero-grid { display: grid; grid-template-columns: 1.04fr .96fr; align-items: center; gap: clamp(36px, 7vw, 90px); }
@@ -526,8 +547,9 @@
       html { scroll-padding-top: 76px; }
       .wrap { width: min(100% - 32px, 520px); }
       .header-inner { min-height: 68px; gap: 12px; }
-      .desktop-nav, .header-cta { display: none; }
-      .mobile-menu { display: block; }
+      .brand { gap: 8px; font-size: .94rem; }
+      .brand-mark { width: 36px; }
+      .mobile-menu summary { padding: 8px 10px; }
       .hero { padding-top: 45px; }
       .hero-grid { grid-template-columns: 1fr; gap: 30px; }
       h1 { max-width: 580px; margin-top: 21px; font-size: clamp(3.6rem, 16vw, 5.4rem); }
@@ -583,6 +605,7 @@
         <a href="#experience">Experience</a>
         <a href="#contact">Contact</a>
       </nav>
+      <button class="language-toggle" id="language-toggle" type="button" aria-label="Switch to Indonesian" title="Switch to Indonesian" lang="id">ID</button>
       <a class="header-cta" href="mailto:revaldialzikri2405@gmail.com">Let’s talk <span aria-hidden="true">↗</span></a>
       <details class="mobile-menu">
         <summary aria-label="Open navigation menu">Menu <span aria-hidden="true">＋</span></summary>
@@ -606,6 +629,7 @@
           <p class="hero-copy"><strong>Hi, I’m Revaldi.</strong> I’m building a career in Human Resources, bringing experience from training and operational support. I care about what helps people do good work: clear expectations, useful learning, and processes they can rely on.</p>
           <div class="hero-actions">
             <a class="button button-primary" href="#projects">Explore my experience <span aria-hidden="true">↓</span></a>
+            <a class="button button-secondary" href="assets/Revaldi-Alzikri-CV.pdf" download="Revaldi-Alzikri-CV.pdf">Download CV <span aria-hidden="true">↓</span></a>
             <a class="button button-secondary" href="mailto:revaldialzikri2405@gmail.com">Say hello <span aria-hidden="true">↗</span></a>
           </div>
           <div class="hero-notes" aria-label="Areas of focus">
@@ -815,5 +839,6 @@
       <a href="#home">Back to top ↑</a>
     </div>
   </footer>
+  <script src="assets/language.js" defer></script>
 </body>
 </html>
