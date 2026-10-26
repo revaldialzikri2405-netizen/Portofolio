@@ -128,6 +128,7 @@
     "Problem solving": "Pemecahan masalah",
     "Attention to detail": "Ketelitian",
     "Data & tools": "Data & perangkat",
+    "AI tools": "Perangkat AI",
     "Attendance & salary reporting": "Pelaporan kehadiran & gaji",
     "Operational documentation": "Dokumentasi operasional",
     "Microsoft Excel": "Microsoft Excel",
