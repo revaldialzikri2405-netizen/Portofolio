@@ -198,7 +198,7 @@
     .mobile-links .header-download { margin-top: 4px; color: var(--green); background: rgba(23, 63, 53, .08); font-weight: 700; }
     .mobile-links .header-download:hover { color: var(--maroon-bright); background: rgba(23, 63, 53, .13); }
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1120px) {
       .desktop-nav, .header-cta { display: none; }
       .mobile-menu { display: block; }
     }
@@ -219,8 +219,8 @@
     h1 {
       max-width: 720px;
       margin: 26px 0 22px;
-      font: 700 clamp(3.55rem, 7.6vw, 7rem)/.88 var(--display);
-      letter-spacing: -.09em;
+      font: 700 clamp(3.55rem, 6.6vw, 6.1rem)/.96 var(--display);
+      letter-spacing: -.075em;
     }
     h1 .maroon-word { color: var(--maroon); }
     h1 .underlined {
@@ -270,7 +270,7 @@
       font-weight: 700;
     }
 
-    .hero-art { position: relative; min-height: 500px; }
+    .hero-art { position: relative; min-height: 480px; }
     .portrait-stage {
       position: absolute;
       inset: 22px 28px 20px 42px;
@@ -603,6 +603,7 @@
       *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
     }
   </style>
+  <link rel="stylesheet" href="assets/design.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -653,8 +654,16 @@
         </div>
 
         <div class="hero-art" role="group" aria-label="A portrait of Revaldi Alzikri">
+          <svg class="connection-art" viewBox="0 0 520 540" fill="none" aria-hidden="true">
+            <path class="connection-track" d="M57 382C-8 284 21 106 160 48C299-10 474 67 488 232C498 351 432 431 349 476"/>
+            <path class="connection-dash" d="M57 382C-8 284 21 106 160 48C299-10 474 67 488 232C498 351 432 431 349 476"/>
+            <g class="connection-node node-one"><circle cx="57" cy="382" r="15"/><path d="m51 382 4 4 8-9"/></g>
+            <g class="connection-node node-two"><circle cx="160" cy="48" r="18"/><circle class="node-head" cx="160" cy="44" r="4"/><path d="M152 56c0-8 16-8 16 0"/></g>
+            <g class="connection-node node-three"><circle cx="488" cy="232" r="13"/><path d="M482 232h12m-6-6v12"/></g>
+            <circle class="connection-speck" cx="349" cy="476" r="5"/>
+          </svg>
           <div class="portrait-stage">
-            <img class="portrait" src="REVAL.jpg" alt="Revaldi Alzikri" fetchpriority="high">
+            <img class="portrait" src="REVAL.jpg" alt="Revaldi Alzikri" width="1087" height="1447" fetchpriority="high">
           </div>
           <div class="art-label art-label-top"><span class="eyebrow">Currently</span><strong>Growing through<br>people practices</strong></div>
           <div class="art-label art-label-bottom"><span class="eyebrow">Based in</span><strong>Padang, Indonesia</strong></div>
@@ -663,6 +672,11 @@
         </div>
       </div>
     </section>
+
+    <div class="motion-toolbar wrap">
+      <span class="motion-caption" aria-hidden="true"><span class="caption-line"></span> People. Process. Possibility.</span>
+      <button class="motion-toggle" type="button" aria-pressed="false" hidden><span class="motion-icon" aria-hidden="true">Ⅱ</span><span class="motion-label">Pause motion</span></button>
+    </div>
 
     <div class="ticker-wrap" aria-label="Portfolio themes">
       <div class="wrap ticker">
@@ -712,6 +726,12 @@
             <div class="monitor-board">
               <div class="monitor-head"><span>SOP REFRESHERS</span><span>WEEKLY</span></div>
               <div class="monitor-stats"><div class="monitor-stat"><strong>55</strong><small>OUTLETS</small></div><div class="monitor-stat"><strong>55</strong><small>ADMINS</small></div></div>
+              <svg class="learning-network" viewBox="0 0 280 58" fill="none" aria-hidden="true">
+                <path class="learning-line" d="M35 29h210"/>
+                <g class="learning-person"><circle cx="35" cy="29" r="22"/><circle cx="35" cy="23" r="5"/><path d="M25 39c0-12 20-12 20 0"/></g>
+                <g class="learning-person"><circle cx="140" cy="29" r="22"/><circle cx="140" cy="23" r="5"/><path d="M130 39c0-12 20-12 20 0"/></g>
+                <g class="learning-person"><circle cx="245" cy="29" r="22"/><circle cx="245" cy="23" r="5"/><path d="M235 39c0-12 20-12 20 0"/></g>
+              </svg>
               <div class="training-modes"><span>Online · weekly</span><span>In person · Padang</span></div>
             </div>
           </div>
@@ -765,19 +785,19 @@
       </div>
       <div class="gallery-grid" aria-label="Job photo gallery">
         <figure class="gallery-card">
-          <img class="gallery-photo" src="images/cross-company-training.jpg" alt="Revaldi hosting a cross-company training session in front of an audience." loading="lazy">
+          <button class="gallery-open" type="button"><img class="gallery-photo" src="images/cross-company-training.jpg" alt="Revaldi hosting a cross-company training session in front of an audience." loading="lazy"><span class="photo-expand" aria-hidden="true">↗</span></button>
           <figcaption><strong>Cross-company training</strong><span>Host · 200+ attendees</span></figcaption>
         </figure>
         <figure class="gallery-card">
-          <img class="gallery-photo" src="images/padang-area-owners-meeting.jpg" alt="Revaldi standing with Padang area owners after a meeting." loading="lazy">
+          <button class="gallery-open" type="button"><img class="gallery-photo" src="images/padang-area-owners-meeting.jpg" alt="Revaldi standing with Padang area owners after a meeting." loading="lazy"><span class="photo-expand" aria-hidden="true">↗</span></button>
           <figcaption><strong>Padang area owners meeting</strong><span>Moderator · event prep &amp; minutes</span></figcaption>
         </figure>
         <figure class="gallery-card">
-          <img class="gallery-photo" src="images/network-monthly-meeting.jpg" alt="Revaldi standing with the Network team at a monthly meeting." loading="lazy">
+          <button class="gallery-open" type="button"><img class="gallery-photo" src="images/network-monthly-meeting.jpg" alt="Revaldi standing with the Network team at a monthly meeting." loading="lazy"><span class="photo-expand" aria-hidden="true">↗</span></button>
           <figcaption><strong>Network monthly meeting</strong><span>Performance insights</span></figcaption>
         </figure>
         <figure class="gallery-card">
-          <img class="gallery-photo" src="images/jt-cargo-anniversary-talkshow.jpg" alt="Revaldi hosting a talk show with J&amp;T Cargo’s West Sumatra leadership at the company’s fifth-anniversary celebration." loading="lazy">
+          <button class="gallery-open" type="button"><img class="gallery-photo" src="images/jt-cargo-anniversary-talkshow.jpg" alt="Revaldi hosting a talk show with J&amp;T Cargo’s West Sumatra leadership at the company’s fifth-anniversary celebration." loading="lazy"><span class="photo-expand" aria-hidden="true">↗</span></button>
           <figcaption><strong>5th anniversary talk show</strong><span>Host · West Sumatra leaders</span></figcaption>
         </figure>
       </div>
@@ -833,6 +853,11 @@
 
     <section class="contact-section wrap" id="contact" aria-labelledby="contact-title">
       <div class="contact-panel">
+        <svg class="contact-art" viewBox="0 0 400 500" fill="none" aria-hidden="true">
+          <circle cx="305" cy="240" r="170"/><circle cx="305" cy="240" r="120"/><circle cx="305" cy="240" r="70"/>
+          <path d="M135 240h340M305 70v340"/>
+          <g class="contact-orbit"><circle cx="305" cy="70" r="11"/><circle cx="135" cy="240" r="7"/></g>
+        </svg>
         <div class="contact-content">
           <p class="eyebrow">Open to HR opportunities</p>
           <h2 id="contact-title">Let’s help people<br>do their best work.</h2>
@@ -855,5 +880,6 @@
     </div>
   </footer>
   <script src="assets/language.js" defer></script>
+  <script src="assets/motion.js" defer></script>
 </body>
 </html>

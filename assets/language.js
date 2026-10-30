@@ -1,5 +1,8 @@
 (() => {
   const translations = {
+    "People. Process. Possibility.": "Manusia. Proses. Peluang.",
+    "Pause motion": "Jeda animasi",
+    "Resume motion": "Lanjutkan animasi",
     "Revaldi Alzikri — Building a Career in HR": "Revaldi Alzikri — Mengembangkan Karier di Bidang SDM",
     "Skip to content": "Lewati ke konten",
     "About": "Tentang",
@@ -208,6 +211,8 @@
     languageButton.setAttribute("aria-label", isIndonesian ? translation("Switch to English", locale) : translation("Switch to Indonesian", locale));
     languageButton.title = isIndonesian ? translation("Switch to English", locale) : translation("Switch to Indonesian", locale);
     languageButton.lang = isIndonesian ? "en" : "id";
+
+    document.dispatchEvent(new CustomEvent("portfolio:languagechange"));
 
     try {
       localStorage.setItem("portfolio-language", locale);
